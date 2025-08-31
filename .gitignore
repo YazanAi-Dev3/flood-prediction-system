@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+venv/
+env/
+
+
+bert-base-uncased-local/
+
+
+*.log
+
+*.csv
