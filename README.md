@@ -18,11 +18,12 @@ This project is divided into two main parts:
 The entire process of building the AI model is documented in the Jupyter Notebooks inside the `/notebooks` directory.
 
 * **`1_Data_Exploration_and_Cleaning.ipynb`**: Covers the initial data loading, analysis, visualization, and cleaning steps.
-* **`2_Model_Training_and_Evaluation.ipynb`**: Details the full hybrid pipeline:
     * Generating the contextual `Text_Description` feature.
     * Processing text with BERT and PCA.
     * Scaling numerical features.
     * Balancing the dataset using SMOTE.
+* **`2_Model_Training_and_Evaluation.ipynb`**: Details the full hybrid pipeline:
+
     * Training the final `RandomForestClassifier`.
     * Evaluating the model's performance on a test set.
 
