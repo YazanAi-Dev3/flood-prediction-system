@@ -7,6 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://python.org)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-RandomForest-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
 [![BERT](https://img.shields.io/badge/BERT-Text_Features-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **A hybrid flood-risk model that fuses contextual text features (BERT + PCA) with scaled numerical weather data — plus a production script that polls live weather APIs and fires notifications on high risk.**
 
