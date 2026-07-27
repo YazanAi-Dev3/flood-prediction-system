@@ -18,7 +18,7 @@
 
 ```mermaid
 flowchart TD
-    subgraph DEV["Part 1 · Model Development (/notebooks)"]
+    subgraph DEV["Part 1 · Model Development (notebooks/)"]
         RAW["Weather + context data"] --> TXT["Generate Text_Description feature<br/>→ BERT embeddings → PCA"]
         RAW --> NUM["Scale numerical features"]
         TXT --> BAL["SMOTE class balancing"]
@@ -26,7 +26,7 @@ flowchart TD
         BAL --> RF["RandomForestClassifier<br/>→ flood_model.pkl + scaler.pkl + pca.pkl"]
     end
 
-    subgraph DEP["Part 2 · Real-Time Deployment (/deployment)"]
+    subgraph DEP["Part 2 · Real-Time Deployment (deployment/)"]
         RF --> MON["flood_monitor_production.py<br/>hourly schedule"]
         MON --> API["Fetch live weather per city"]
         API --> PRED["Predict flood severity"]
@@ -36,9 +36,9 @@ flowchart TD
 ```
 
 ## Part 1 — Model Development
-- `1_Data_Exploration_and_Cleaning.ipynb` — analysis, the contextual `Text_Description` feature, BERT + PCA text processing, numeric scaling, SMOTE balancing
-- `2_Model_Training_and_Evaluation.ipynb` — trains and evaluates the `RandomForestClassifier`
-- Saves `flood_model.pkl`, `scaler.pkl`, `pca.pkl` to `/models`
+- `notebooks/Data_Exploration_and_Cleaning.ipynb` — analysis, the contextual `Text_Description` feature, BERT + PCA text processing, numeric scaling, SMOTE balancing
+- `notebooks/Model_Training_and_Evaluation.ipynb` — trains and evaluates the `RandomForestClassifier`
+- Saves `flood_model.pkl`, `scaler.pkl`, `pca.pkl` to `models/`
 
 ## Part 2 — Real-Time Deployment
 `deployment/flood_monitor_production.py` runs on a schedule, fetches live weather for a list of cities, predicts severity with the trained models, and sends a notification when high risk is detected.
@@ -51,9 +51,13 @@ flowchart TD
 git clone https://github.com/YazanAi-Dev3/flood-prediction-system.git
 cd flood-prediction-system
 pip install -r requirements.txt
-jupyter lab      # explore /notebooks
+jupyter lab      # explore notebooks/
 ```
 
 ## Tech Stack
 
 `Python` · `scikit-learn` (RandomForest, SMOTE) · `BERT` + `PCA` (text features) · `Pandas`
+
+## License
+
+MIT — see [LICENSE](LICENSE).
